@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impares</title>
+</head>
+
+<body>
+    <script>
+        var vector = [];
+        for (i = 0; i <= 21; i++) {
+            if (i % 2 != 0) {
+                vector.push(i);
+            }
+        }
+        var total = 0;
+        for (i of vector) {
+            total += i;
+        }
+
+        var buscar = parseInt(prompt("Escriba el valor a buscar dentro del vector: "));
+        var valor = vector.indexOf(buscar);
+        var splice_vector = Array.from(vector);
+        if (valor >= 0) {
+            resultado = `Se encuenta en el indice: ${valor}`;
+            retorno = splice_vector.splice(valor);
+            retorno.shift();
+            splice_vector.push(retorno);
+        } else {
+            resultado = "No se encuenta el elemento";
+        }
+
+        alert(`
+        * El vector creado es: ${vector}
+        - La suma del vector es: ${total}
+        - El vector inverso es: ${vector.reverse()}
+        - Resultado de su busqueda: ${resultado}
+        - El vector actual es: ${splice_vector}
+        - Orden ascendente: ${vector.sort((a, b) => a - b)}
+        - Orden descendente: ${vector.sort((a, b) => b - a)} 
+        `);
+    </script>
+</body>
+
+</html>

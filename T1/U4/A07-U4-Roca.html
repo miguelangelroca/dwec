@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array2</title>
+</head>
+
+<body>
+    <script>
+        var array = [];
+        for (i = 0; i < 10; i++) {
+            array.push(Math.floor(Math.random() * 10));
+        }
+        var menor = array.filter(elemento => elemento < 8);
+        var impar = [];
+        for (elemento of array) {
+            if (elemento % 2 != 0) {
+                var indice = array.indexOf(elemento);
+                impar.push("impar");
+            } else {
+                impar.push(elemento);
+            }
+        }
+        alert(`
+        * El array creado es: ${array}
+        - El array menor a 8: ${menor}
+        - El array de impares: ${impar}
+        `);
+    </script>
+</body>
+
+</html>

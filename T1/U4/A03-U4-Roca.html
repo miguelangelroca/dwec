@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+</head>
+
+<body>
+    <script>
+        Array.prototype.quitar_elementos = function () {
+            nuevo_vector = this.splice(0, 1);
+            nuevo_vector.push(this.pop());
+            return nuevo_vector;
+        }
+        var vector = [];
+        for (i = 0; i < 10; i++) {
+            vector.push(Math.floor(Math.random() * 1001));
+        }
+        vector = vector.sort((a, b) => a - b);
+        var original_vector = Array.from(vector);
+        var nuevo_vector = vector.quitar_elementos();
+
+        alert(`El vector original es: ${original_vector}\nEl vector modificado es: ${vector}\nEl nuevo vector es: ${nuevo_vector}`);
+
+    </script>
+</body>
+
+</html>

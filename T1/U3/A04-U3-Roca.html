@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saludo</title>
+</head>
+
+<body>
+    <script>
+        var hora = new Date().getHours();
+        if (hora >= 0 && hora < 12) {
+            alert("¡Buenos Días!");
+        }
+        if (hora >= 12 && hora < 19) {
+            alert("¡Buenas Tardes!");
+        }
+        if (hora >= 19 && hora < 24) {
+            alert("¡Buenas Noches!");
+        }
+    </script>
+</body>
+
+</html>

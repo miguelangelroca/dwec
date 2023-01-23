@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edad</title>
+</head>
+
+<body>
+    <script>
+        var fecha = new Date();
+        var nacimiento = new Date(1991, 9, 29);
+        var diferencia = (fecha - nacimiento) / 1000;
+        var anyos = Math.floor(diferencia / (24 * 3600 * 365));
+        document.write(`- Roca tiene ${anyos} años.<br>`);
+    </script>
+</body>
+
+</html>

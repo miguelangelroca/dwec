@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palabras</title>
+</head>
+
+<body>
+    <script>
+        var palabras = prompt("Escriba algunas palabras: ");
+        if (!palabras) {
+            alert("Debes introducir algún caracter.");
+        }
+        palabras = palabras.split(" ");
+        alert(`
+        * Las palabras son: ${palabras}
+        - Las palabras al revés: ${palabras.reverse()}
+        - La primera palabra es: ${palabras.reverse()[0]}
+        - La ultima palabra es: ${palabras[palabras.length - 1]}
+        - El total de palabras es: ${palabras.length}
+        - Orden ascendente (a-z): ${palabras.sort()}
+        - Orden descendente (z-a): ${palabras.sort().reverse()}
+        `);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edad2</title>
+</head>
+
+<body>
+    <script>
+        var fecha = new Date();
+        var valor = prompt("Introduzca su fecha de nacimiento DD/MM/YY: ").split('/');
+        var nacimiento = new Date(valor[2], valor[1] - 1, valor[0]);
+        var diferencia = (fecha - nacimiento) / 1000;
+        var anyos = Math.floor(diferencia / (24 * 3600 * 365));
+        var meses = Math.floor(diferencia / (24 * 3600 * 30));
+        var dias = Math.floor(diferencia / (3600 * 24));
+        document.write(`- Tienes ${anyos} años.<br>`);
+        document.write(`- Tienes ${meses} meses.<br>`);
+        document.write(`- Tienes ${dias} dias.<br>`);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto</title>
+</head>
+
+<body>
+    <script>
+        class Vehiculo {
+            constructor(marca, modelo, color, anyo, cilindrada) {
+                this.marca = marca;
+                this.modelo = modelo;
+                this.color = color;
+                this.anyo = anyo;
+                this.velocidad = 0;
+                this.estado = false;
+                this.cilindrada = cilindrada;
+            }
+            mostrarDatos() {
+                alert(`
+                - Marca: ${this.marca}
+                - Modelo: ${this.modelo}
+                - Color: ${this.color}
+                - Año: ${this.anyo}
+                - Velocidad: ${this.velocidad}
+                - Estado: ${this.estado}
+                - Cilindrada: ${this.cilindrada}
+                `);
+            }
+            acelerar(velocidad) {
+                this.velocidad = velocidad;
+                alert(`El coche aceleró a: ${this.velocidad} Km/h`);
+            }
+            arrancar() {
+                if (!this.estado) {
+                    this.estado = true;
+                    alert(`El coche: ${this.marca}\nModelo: ${this.modelo}\nColor: ${this.color}\nEstado: Arrancó.`);
+                } else {
+                    alert("El coche ya está arrancado.");
+                }
+            }
+            frenar() {
+                if (this.estado) {
+                    this.estado = false;
+                    alert(`El coche: ${this.marca}\nModelo: ${this.modelo}\nColor: ${this.color}\nEstado: Se paró.`);
+                } else {
+                    alert("El coche ya está parado.");
+                }
+            }
+        }
+        var objeto1 = new Vehiculo("ford", "focus", "rojo", "2020", 1600);
+        var objeto2 = new Vehiculo("seat", "ibiza", "amarillo", "2018", 1900);
+
+        alert(objeto1.modelo);
+        alert(objeto2["color"]);
+        objeto1.acelerar(120);
+        objeto2.arrancar();
+        objeto2.frenar();
+        objeto2.mostrarDatos();
+        alert(Object.keys(objeto1));
+        alert(Object.getOwnPropertyNames(objeto1));
+        var propiedades = [];
+        for (element in objeto1) {
+            propiedades.push(element);
+        }
+        alert(propiedades);
+        alert("La principal diferencia es que for in y Object.keys(obj)\ndevuelven las propiedades enumerables mientras\nObject.getOwnPropertyNames(obj) las devuelve todas.");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IVA</title>
+</head>
+
+<body>
+    <form action="">
+        <label for="importe">
+            Escriba el importe:
+            <input type="number" name="importe" id="importe">
+        </label>
+        </br></br>
+        <label for="via">
+            Seleccione el iva:
+            <input type="radio" name="iva" id="iva" value="21">21%
+            <input type="radio" name="iva" id="iva" value="10">10%
+            <input type="radio" name="iva" id="iva" value="5">5%
+        </label>
+        </br></br>
+        <button type="submit" onclick="obtenerImporteConImpuestos()">Enviar</button>
+    </form>
+    <script>
+        function obtenerImporteConImpuestos() {
+            var importe = parseInt(document.getElementById("importe").value);
+            if (document.querySelector('input[id="iva"]:checked')) {
+                var iva = parseInt(document.querySelector('input[id="iva"]:checked').value);
+            } else {
+                var iva = 21;
+            };
+            var total = (importe + (importe * (iva / 100))).toFixed(2);
+            alert(`El importe es: ${importe}\nEl importe más el IVA es: ${total}`);
+        }
+    </script>
+</body>
+
+</html>

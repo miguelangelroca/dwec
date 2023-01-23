@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multidimensional</title>
+</head>
+
+<body>
+    <script>
+        var array = {};
+        for (i = 0; i < 5; i++) {
+            var alumno = prompt("Escribe el nombre del alumno: ");
+            array[alumno] = [];
+            for (j = 0; j < 3; j++) {
+                var nota = prompt("Escribe la nota entre 0 y 10: ");
+                if (nota >= 0 && nota <= 10) {
+                    array[alumno].push(nota);
+                } else {
+                    alert("La nota debe estar comprendida entre 0 y 10");
+                }
+            }
+        }
+    </script>
+    <table border="2">
+        <thead>
+            <th>Nombre</th>
+            <th>Nota1</th>
+            <th>Nota2</th>
+            <th>Nota3</th>
+        </thead>
+        <tbody>
+            <script>
+                for (element in array) {
+                    document.write("<tr>");
+                    document.write(`<td>${element}</td>`);
+                    document.write(`<td>${array[element][0]}</td>`);
+                    document.write(`<td>${array[element][1]}</td>`);
+                    document.write(`<td>${array[element][2]}</td>`);
+                    document.write("</tr>");
+                }
+            </script>
+        </tbody>
+    </table>
+</body>
+
+</html>

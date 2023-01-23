@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="A08-U5-Roca.js"></script>
+    <title>Actividad 8 Unidad 5</title>
+    <style>
+      fieldset {
+        width: fit-content;
+      }
+      button a {
+        outline: none;
+        text-decoration: none;
+        color: black;
+      }
+      form {
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="#">
+      <fieldset>
+        <legend>Datos Personales</legend>
+        <label for="name">Introduce tu nombre: </label>
+        <input type="text" name="name" id="name" /><br />
+        <label for="message">Mensaje</label><br />
+        <textarea name="message" id="message" cols="50" rows="5"></textarea>
+      </fieldset>
+      <br /><br />
+
+      <label for="color">Elige un color</label><br />
+      <input type="radio" name="color" id="red" value="red" />
+      <label for="red">Rojo</label><br />
+      <input type="radio" name="color" id="green" value="green" />
+      <label for="green">Verde</label><br />
+      <input type="radio" name="color" id="blue" value="blue" />
+      <label for="blue">Azul</label><br /><br />
+
+      <label for="course">Selecciona una asignatura:</label>
+      <select name="course" id="course">
+        <option value="0" disabled selected hidden>Asignatura</option>
+        <option value="1">Cliente</option>
+        <option value="2">Despliegue</option>
+        <option value="3">Diseño</option>
+        <option value="4">Empresa</option>
+        <option value="5">Servidor</option></select
+      ><br /><br />
+
+      <label for="day">Seleccione los días con disponibilad:</label> <br />
+      <input type="checkbox" name="monday" id="1" />
+      <label for="monday">Lunes</label><br />
+      <input type="checkbox" name="tuesday" id="2" />
+      <label for="tuesday">Martes</label><br />
+      <input type="checkbox" name="wednesday" id="3" />
+      <label for="wednesday">Miércoles</label><br />
+      <input type="checkbox" name="thursday" id="4" />
+      <label for="thursday">Jueves</label><br />
+      <input type="checkbox" name="friday" id="5" />
+      <label for="friday">Viernes</label><br /><br />
+
+      <label for="preferential">Selecciona el día preferente:</label>
+      <select name="preferential" id="preferential">
+        <option value="0" disabled selected hidden>Día</option>
+        <option value="1">Lunes</option>
+        <option value="2">Martes</option>
+        <option value="3">Miércoles</option>
+        <option value="4">Jueves</option>
+        <option value="5">Viernes</option></select
+      ><br /><br />
+
+      <button type="submit">
+        Haz click para enviar información
+      </button>
+      <button type="reset">Comenzar a rellenar de nuevo</button>
+      <button>
+        <a href="https://www.google.es">Haz click sobre mi</a>
+      </button>
+    </form>
+  </body>
+</html>
