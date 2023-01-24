@@ -5,7 +5,7 @@ function comprobar(id, value) {
   }
   switch (id) {
     case "dni":
-      if (!/^[0-9]{8}[A-Za-z]{1}$/.test(value)) {
+      if (!/^[0-9]{2}.[0-9]{3}.[0-9]{2}-[A-Za-z]{1}$/.test(value)) {
         alert("El DNI no cumple el formato");
         document.getElementById(id).value = "";
       } else {
