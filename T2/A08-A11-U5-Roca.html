@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="A08-U5-Roca.js"></script>
+    <script src="A08-A11-U5-Roca.js"></script>
     <title>Actividad 8 Unidad 5</title>
     <style>
       fieldset {
@@ -15,13 +15,10 @@
         text-decoration: none;
         color: black;
       }
-      form {
-        background-color: white;
-      }
     </style>
   </head>
   <body>
-    <form action="#">
+    <form action="" id="form">
       <fieldset>
         <legend>Datos Personales</legend>
         <label for="name">Introduce tu nombre: </label>
@@ -32,48 +29,61 @@
       <br /><br />
 
       <label for="color">Elige un color</label><br />
-      <input type="radio" name="color" id="red" value="red" />
+      <input
+        type="radio"
+        name="color"
+        value="red"
+        onclick="change_color(value)"
+      />
       <label for="red">Rojo</label><br />
-      <input type="radio" name="color" id="green" value="green" />
+      <input
+        type="radio"
+        name="color"
+        value="green"
+        onclick="change_color(value)"
+      />
       <label for="green">Verde</label><br />
-      <input type="radio" name="color" id="blue" value="blue" />
+      <input
+        type="radio"
+        name="color"
+        value="blue"
+        onclick="change_color(value)"
+      />
       <label for="blue">Azul</label><br /><br />
 
       <label for="course">Selecciona una asignatura:</label>
       <select name="course" id="course">
         <option value="0" disabled selected hidden>Asignatura</option>
-        <option value="1">Cliente</option>
-        <option value="2">Despliegue</option>
-        <option value="3">Diseño</option>
-        <option value="4">Empresa</option>
-        <option value="5">Servidor</option></select
+        <option value="Rafael">Cliente</option>
+        <option value="Miguel">Despliegue</option>
+        <option value="Andres">Diseño</option>
+        <option value="Irene">Empresa</option>
+        <option value="Ricardo">Servidor</option></select
       ><br /><br />
 
       <label for="day">Seleccione los días con disponibilad:</label> <br />
-      <input type="checkbox" name="monday" id="1" />
+      <input type="checkbox" value="Lunes" onclick="day(value)" />
       <label for="monday">Lunes</label><br />
-      <input type="checkbox" name="tuesday" id="2" />
+      <input type="checkbox" value="Martes" onclick="day(value)" />
       <label for="tuesday">Martes</label><br />
-      <input type="checkbox" name="wednesday" id="3" />
+      <input type="checkbox" value="Miércoles" onclick="day(value)" />
       <label for="wednesday">Miércoles</label><br />
-      <input type="checkbox" name="thursday" id="4" />
+      <input type="checkbox" value="Jueves" onclick="day(value)" />
       <label for="thursday">Jueves</label><br />
-      <input type="checkbox" name="friday" id="5" />
+      <input type="checkbox" value="Viernes" onclick="day(value)" />
       <label for="friday">Viernes</label><br /><br />
 
       <label for="preferential">Selecciona el día preferente:</label>
       <select name="preferential" id="preferential">
         <option value="0" disabled selected hidden>Día</option>
-        <option value="1">Lunes</option>
-        <option value="2">Martes</option>
-        <option value="3">Miércoles</option>
-        <option value="4">Jueves</option>
-        <option value="5">Viernes</option></select
+        <option value="Lunes">Lunes</option>
+        <option value="Martes">Martes</option>
+        <option value="Miércoles">Miércoles</option>
+        <option value="Jueves">Jueves</option>
+        <option value="Viernes">Viernes</option></select
       ><br /><br />
 
-      <button type="submit">
-        Haz click para enviar información
-      </button>
+      <button type="submit">Haz click para enviar información</button>
       <button type="reset">Comenzar a rellenar de nuevo</button>
       <button>
         <a href="https://www.google.es">Haz click sobre mi</a>
