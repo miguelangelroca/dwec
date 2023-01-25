@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <form method="get" action="#">
+        <fieldset>
+            <legend>Datos Personales:</legend><br>
+            <label for="name">Nombre:</label>
+            <input type="text" name="name" id="name" maxlength="20"  required><br>
+            <label for="surname">Apellidos:</label>
+            <input type="text" name="surname" id="surname" required><br>
+            <label for="web">Página web</label>
+            <input type="url" name="web" id="web" placeholder="https://www.example.com"><br>
+            <label for="mail">Correo</label>
+            <input type="email" name="mail" id="mail" placeholder="example@example.com"><br>
+            <label for="color">Color Favorito</label>
+            <input type="color" name="color" id="color"><br>
+            <textarea name="color" id="color" cols="30" rows="5" placeholder="Algo más que añadir..."></textarea>
+        </fieldset>
+        <fieldset >
+            <legend>Indique su género:</legend>
+            <select multiple>
+                <option value="Hombre">Hombre</option>
+                <option value="Mujer">Mujer</option>
+                <option value="Otros">NS/NC</option>
+            </select><br>
+            <input type="checkbox" name="mujer" id="mujer">Mujer <br>
+            <input type="checkbox" name="hombre" id="hombre">Hombre <br>
+            <input type="checkbox" name="nc" id="nc">Prefiero no contestar <br>
+        </fieldset>
+        <fieldset>
+            <legend>Login:</legend>
+            <label for="user">Nombre de Usuario:</label>
+            <input type="text" name="user" id="user" placeholder="Nombre de Usuario">
+            <br>
+            <label for="pass">Contraseña:</label>
+            <input type="password" name="pass" id="pass" placeholder="Contraseña">
+        </fieldset>
+        <fieldset>
+            <legend>Consentimiento</legend>
+            <input type="checkbox" name="1" id="1" checked>Deseo recibir información sobre novedades y ofertas. <br>
+            <input type="checkbox" name="2" id="2">Declaro haber leído y aceptar las condiciones 
+                                                    generales del programa y la normativa sobre protección de datos.
+        </fieldset>
+        <fieldset>
+            <legend>Indique sus preferencias de lenguaje:</legend>
+            <label for="js">Javascript</label>
+            <input type="radio" name="leng" id="js" checked> 
+            <label for="html">HTML</label>
+            <input type="radio" name="leng" id="html">
+            <label for="python">Python</label>
+            <input type="radio" name="leng" id="python">
+        </fieldset>
+        <fieldset>
+            <legend>Reserva Hotel:</legend>
+            <label for="entry">Fecha de Llegada:</label>
+            <input type="date" name="entry" id="entry"><br>
+            <label for="entrytime">Hora de Entrada</label>
+            <input type="time" name="entrytime" id="entrytime"><br>
+            <label for="exit">Fecha de Salida:</label>
+            <input type="date" name="exit" id="exit"><br>
+            <label for="exittime">Hora de Salida</label>
+            <input type="time" name="exittime" id="exittime"><br>
+        </fieldset>
+        <fieldset>
+            <legend>Compra:</legend>
+            <label for="bottle">Número de botellas</label>
+            <input type="number" name="bottle" id="bottle" value="0"><br>
+            <label for="pak">Número de botellas en paquete</label>
+            <input type="number" name="pak" id="pak" step="3" value="0"><br>
+            <label for="meet">Carne:</label>
+            <select name="meet" id="meet">
+                <option value="choose" hidden>Elija</option>
+                <option value="red">Roja</option>
+                <option value="white">Blanca</option>
+            </select> <br>
+            <label for="amount">Cantidad:</label>
+            <input type="text" name="amount" id="amount" pattern="[0-9]+(kg|gr)" placeholder="10kg ó 10gr" tittle="gr o KG"><br>
+            <label for="meat">Carne:</label>
+            <select name="meat" id="meat">
+                <optgroup label="Carne Roja">
+                    <option value="" hidden>Elija</option>
+                    <option value="cow">Ternera</option>
+                    <option value="pig">Cerdo</option>
+                    <option value="ox">Buey</option>
+                </optgroup>
+                <optgroup label="Carne Blanca">
+                    <option value="chicken">Pollo</option>
+                    <option value="turkey">Pavo</option>
+                    <option value="rabbit" disabled>Conejo</option>
+                </optgroup>
+            </select>
+        </fieldset>
+            <br>
+            <button type="submit" value="Enviar" >Enviar</button>
+            <input type="reset" value="Borrar">
+    </form>
+</body>
+</html>
