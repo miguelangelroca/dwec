@@ -1,11 +1,11 @@
-var dni = (names = birthday = email = web = password = "");
+var dni = (names = birthday = email = web = password = passwordconfirm = "");
 function comprobar(id, value) {
   if (value === "" || id === "") {
     return;
   }
   switch (id) {
     case "dni":
-      if (!/^[0-9]{2}.[0-9]{3}.[0-9]{2}-[A-Za-z]{1}$/.test(value)) {
+      if (!/^[0-9]{2}.[0-9]{3}.[0-9]{3}-[A-Z]{1}$/.test(value)) {
         alert("El DNI no cumple el formato");
         document.getElementById(id).value = "";
       } else {
@@ -56,11 +56,28 @@ function comprobar(id, value) {
         password = value;
       }
       break;
+    case "passwordconfirm":
+      if (!/^\w{8,10}$/.test(value)) {
+        alert("La contraseña no cumple el formato");
+        document.getElementById(id).value = "";
+      } else {
+        passwordconfirm = value;
+      }
+      break;
   }
 }
 
 function seeCookie() {
   cookie =
-    document.cookie = `dni = ${dni}; name = ${names}; birthday = ${birthday}; email = ${email}; web = ${web}; password = ${password}`;
+    document.cookie = `dni = ${dni}; name = ${names}; birthday = ${birthday}; email = ${email}; web = ${web}; password = ${password}; passwordconfirm = ${passwordconfirm}`;
   alert(cookie);
 }
+
+form.addEventListener("submit", function (e) {
+  var password = document.getElementById("password"),
+    passwordconfirm = document.getElementById("passwordconfirm");
+  if (password != passwordconfirm) {
+    alert("Las contraseñas no coinciden");
+    e.preventDefault();
+  }
+});
