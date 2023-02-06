@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="A04-U06-Roca.js" defer></script>
+    <title>Tabla2</title>
+    <style>
+      table,
+      th,
+      tr,
+      td {
+        border: solid 1px;
+        border-collapse: collapse;
+        text-align: center;
+        width: 500px;
+      }
+      th {
+        background-color: gray;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 300px;
+      }
+      fieldset {
+        display: inline-block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="form">
+      <fieldset>
+        <legend>Notas:</legend>
+        <form action="#">
+          <label for="alumno">Alumno:</label>
+          <input type="text" id="nombre" required /><br />
+          <label for="modulo">Nota1:</label>
+          <input
+            type="number"
+            id="nota1"
+            minlength="0"
+            maxlength="10"
+            required
+          /><br />
+          <label for="modulo">Nota2:</label>
+          <input
+            type="number"
+            id="nota2"
+            minlength="0"
+            maxlength="10"
+            required
+          /><br />
+          <label for="modulo">Nota3:</label>
+          <input
+            type="number"
+            id="nota3"
+            minlength="0"
+            maxlength="10"
+            required
+          /><br />
+          <input type="submit" value="Enviar" id="enviar" />
+        </form>
+      </fieldset>
+    </div>
+    <br /><br />
+    <div id="container"></div>
+  </body>
+</html>

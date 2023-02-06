@@ -45,27 +45,37 @@ class Vehiculo {
       var tbody = document.createElement("tbody");
       tbody.setAttribute("id", "tbody");
 
+      var tr = document.createElement("tr");
+      var values = Object.keys(this);
+      for (var i = 0; i < 5; i++) {
+        var value = values[i];
+        var td = document.createElement("td");
+        var text = document.createTextNode(`${this[value]}`);
+        td.appendChild(text);
+        tr.appendChild(td);
+      }
+      tbody.appendChild(tr);
+
       table.appendChild(tbody);
       document.getElementById("container").appendChild(table);
     } else {
       var table = document.getElementById("tabla");
 
+      var tr = document.createElement("tr");
+      var values = Object.keys(this);
+
       for (var i = 0; i < 5; i++) {
-        var tr = document.createElement("tr");
-        var values = Object.keys(this);
-        for (var i = 0; i < 5; i++) {
-          var value = values[i];
-          var td = document.createElement("td");
-          var text = document.createTextNode(`${this[value]}`);
-          td.appendChild(text);
-          tr.appendChild(td);
-        }
-        var tbody = document.getElementById("tbody");
-        tbody.appendChild(tr);
+        var value = values[i];
+        var td = document.createElement("td");
+        var text = document.createTextNode(`${this[value]}`);
+        td.appendChild(text);
+        tr.appendChild(td);
       }
-      table.appendChild(tbody);
-      document.getElementById("container").appendChild(table);
+      var tbody = document.getElementById("tbody");
+      tbody.appendChild(tr);
     }
+    table.appendChild(tbody);
+    document.getElementById("container").appendChild(table);
   }
 }
 var objeto1 = new Vehiculo("Ford", "Focus", "Rojo", "2020", 1600);
@@ -80,4 +90,5 @@ document.getElementById("generar").addEventListener("click", () => {
   objetos.forEach((objeto) => {
     objeto.mostrarDatos();
   });
+  document.getElementById("generar").setAttribute("disabled", "");
 });
